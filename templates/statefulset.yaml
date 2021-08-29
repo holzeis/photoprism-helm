@@ -54,10 +54,10 @@ spec:
         - secretRef:
             name: {{ .Values.database.existingSecret }}
         {{- end }}
-        livenessProbe:
-          httpGet:
-            path: /
-            port: http
+        # livenessProbe:
+        #   httpGet:
+        #     path: /
+        #     port: http
         readinessProbe:
           httpGet:
             path: /
